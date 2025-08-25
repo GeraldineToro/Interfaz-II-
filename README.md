@@ -101,4 +101,5 @@ void loop() {
  // digitalWrite(LED_5, HIGH);  // Rojo peatones encendido
   //delay(2000); // 2 segundos
 }
-```
+``` https://raw.githubusercontent.com/GeraldineToro/Interfaz-II-/refs/heads/main/img/semaforo.png
+

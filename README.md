@@ -26,7 +26,7 @@ void loop() {   // Se repite infinitamente
   delay(1000);             // Esperar 1 segundo
 }
 ```
-</"https://raw.githubusercontent.com/GeraldineToro/Interfaz-II-/refs/heads/main/img/led%20intermitente.png"/>
+<img src="https://raw.githubusercontent.com/GeraldineToro/Interfaz-II-/refs/heads/main/img/led%20intermitente.png"/>
 ```
 ##### Ejercicio n° 3: Led con potenciometro
 
@@ -40,7 +40,7 @@ void loop() {
   analogWrite(13, brillo);               // Ajustar brillo
 }
 ```
-</"https://raw.githubusercontent.com/GeraldineToro/Interfaz-II-/refs/heads/main/img/potenciometro.png"/>
+<img src="https://raw.githubusercontent.com/GeraldineToro/Interfaz-II-/refs/heads/main/img/potenciometro.png"/>
 ```
 ##### Ejercicio n°4: Led pulsador
 
@@ -57,7 +57,7 @@ void loop() {
   }
 }
 ```
-</"https://raw.githubusercontent.com/GeraldineToro/Interfaz-II-/refs/heads/main/img/pulsador.png"/>
+<img src="https://raw.githubusercontent.com/GeraldineToro/Interfaz-II-/refs/heads/main/img/pulsador.png"/>
 ```
 ##### Ejercicio n°5: Semaforo
 

@@ -16,7 +16,7 @@ void loop() {
 
 ```
 
-#####Ejercicio n° 2: Led intermitente
+##### Ejercicio n° 2: Led intermitente
 
 ```js
 void setup() {  // Configuración inicial (ej: pines como entrada/salida)

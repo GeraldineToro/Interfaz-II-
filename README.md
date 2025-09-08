@@ -16,7 +16,7 @@ void loop() {
 
 ```
 
-##### Ejercicio n° 2: Led intermitente
+#####Ejercicio n° 2: Led intermitente
 
 ```js
 void setup() {  // Configuración inicial (ej: pines como entrada/salida)
@@ -32,6 +32,7 @@ void loop() {   // Se repite infinitamente
 ```
 <img src="https://raw.githubusercontent.com/GeraldineToro/Interfaz-II-/refs/heads/main/img/led%20intermitente.png"/>
 ```
+
 ##### Ejercicio n° 3: Led con potenciometro
 
 ```js
@@ -46,6 +47,7 @@ void loop() {
 ```
 <img src="https://raw.githubusercontent.com/GeraldineToro/Interfaz-II-/refs/heads/main/img/potenciometro.png"/>
 ```
+
 ##### Ejercicio n°4: Led pulsador
 
 ```js
@@ -63,6 +65,7 @@ void loop() {
 ```
 <img src="https://raw.githubusercontent.com/GeraldineToro/Interfaz-II-/refs/heads/main/img/pulsador.png"/>
 ```
+
 ##### Ejercicio n°5: Semaforo
 
 ```js// C++ code - Semáforo Autos y Peatones
@@ -113,7 +116,9 @@ void loop() {
 ##### <img src="https://raw.githubusercontent.com/GeraldineToro/Interfaz-II-/refs/heads/main/img/semaforo.png"/>
 
 ```
+
 ##### Eercicio n°6: Arduino-Processing
+
 Arduino
 
 ```js
@@ -178,6 +183,7 @@ void draw()
 ```
 
 ##### Ejercicio n°7: Arduino + boton + processing
+
 Arduino
 ```js
 int buttonPin = 2;  // Pin del botón

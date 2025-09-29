@@ -483,6 +483,81 @@ void loop() {
 
   delay(10);
 }
-``` 
+```
+Ejercicio individual:
+
+```js
+
+// C++ code - Semáforo de Autos y Peatones controlado con botón
+
+// Pines LEDs
+int LED_1 = 6;  // Rojo autos
+int LED_2 = 7;  // Amarillo autos
+int LED_3 = 8;  // Verde autos
+int LED_4 = 9;  // Verde peatones
+int LED_5 = 10; // Rojo peatones
+
+// Pin del botón
+int botonPin = 2;
+
+void setup() {
+  // Configurar pines LED como salida
+  pinMode(LED_1, OUTPUT);
+  pinMode(LED_2, OUTPUT);
+  pinMode(LED_3, OUTPUT);
+  pinMode(LED_4, OUTPUT);
+  pinMode(LED_5, OUTPUT);
+
+  // Configurar botón como entrada con resistencia interna pull-up
+  pinMode(botonPin, INPUT_PULLUP);
+
+  // Estado inicial: semáforo en espera
+  digitalWrite(LED_1, HIGH);  // Rojo autos
+  digitalWrite(LED_2, LOW);
+  digitalWrite(LED_3, LOW);
+  digitalWrite(LED_4, LOW);   // Verde peatones
+  digitalWrite(LED_5, HIGH);  // Rojo peatones
+}
+
+void loop() {
+  // Esperar a que el botón sea presionado (LOW con INPUT_PULLUP)
+  if (digitalRead(botonPin) == LOW) {
+    
+    // 🚦 Fase 1: Autos en verde, peatones en rojo
+    digitalWrite(LED_1, LOW);   // Rojo autos OFF
+    digitalWrite(LED_2, LOW);   // Amarillo autos OFF
+    digitalWrite(LED_3, HIGH);  // Verde autos ON
+    digitalWrite(LED_4, LOW);   // Verde peatones OFF
+    digitalWrite(LED_5, HIGH);  // Rojo peatones ON
+    delay(5000); // 5 segundos
+
+    // 🚦 Fase 2: Amarillo autos, peatones siguen en rojo
+    digitalWrite(LED_3, LOW);   // Verde autos OFF
+    digitalWrite(LED_2, HIGH);  // Amarillo autos ON
+    delay(2000); // 2 segundos
+    digitalWrite(LED_2, LOW);   // Amarillo autos OFF
+
+    // 🚦 Fase 3: Rojo autos, verde peatones
+    digitalWrite(LED_1, HIGH);  // Rojo autos ON
+    digitalWrite(LED_5, LOW);   // Rojo peatones OFF
+    digitalWrite(LED_4, HIGH);  // Verde peatones ON
+    delay(5000); // 5 segundos
+
+    // 🚦 Fase 4: Rojo autos, rojo peatones (pausa)
+    digitalWrite(LED_4, LOW);   // Verde peatones OFF
+    digitalWrite(LED_5, HIGH);  // Rojo peatones ON
+    delay(2000); // 2 segundos
+  }
+
+  // Estado de espera: semáforo en rojo para todos
+  else {
+    digitalWrite(LED_1, HIGH);  // Rojo autos ON
+    digitalWrite(LED_2, LOW);
+    digitalWrite(LED_3, LOW);
+    digitalWrite(LED_4, LOW);   // Verde peatones OFF
+    digitalWrite(LED_5, HIGH);  // Rojo peatones ON
+  }
+}
+```
 <img src="<img src="https://raw.githubusercontent.com/GeraldineToro/Interfaz-II-/refs/heads/main/img/Captura%20de%20pantalla%202025-09-22%20105952.png"/>
 

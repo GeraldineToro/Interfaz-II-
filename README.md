@@ -484,7 +484,7 @@ void loop() {
   delay(10);
 }
 ```
-Ejercicio individual:
+##### Nota n° 1: Semaforo + botón
 
 ```js
 

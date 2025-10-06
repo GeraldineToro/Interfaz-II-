@@ -488,9 +488,9 @@ Ejercicio individual:
 
 ```js
 
-// C++ code - Semáforo de Autos y Peatones controlado con botón
+//Semáforo de Autos y Peatones controlado con botón
 
-// Pines LEDs
+// LEDs
 int LED_1 = 6;  // Rojo autos
 int LED_2 = 7;  // Amarillo autos
 int LED_3 = 8;  // Verde autos
@@ -499,6 +499,9 @@ int LED_5 = 10; // Rojo peatones
 
 // Pin del botón
 int botonPin = 2;
+
+//Variable añadida para detectar la pulsación única 
+int ultimoEstadoBoton = HIGH;
 
 void setup() {
   // Configurar pines LED como salida
@@ -511,17 +514,20 @@ void setup() {
   // Configurar botón como entrada con resistencia interna pull-up
   pinMode(botonPin, INPUT_PULLUP);
 
-  // Estado inicial: semáforo en espera
-  digitalWrite(LED_1, HIGH);  // Rojo autos
+  // semáforo en espera (Rojo autos, Rojo peatones)
+  digitalWrite(LED_1, HIGH);  // Rojo autos ON
   digitalWrite(LED_2, LOW);
   digitalWrite(LED_3, LOW);
-  digitalWrite(LED_4, LOW);   // Verde peatones
-  digitalWrite(LED_5, HIGH);  // Rojo peatones
+  digitalWrite(LED_4, LOW);   // Verde peatones OFF
+  digitalWrite(LED_5, HIGH);  // Rojo peatones ON
 }
 
 void loop() {
-  // Esperar a que el botón sea presionado (LOW con INPUT_PULLUP)
-  if (digitalRead(botonPin) == LOW) {
+  // Leer el estado actual del botón
+  int estadoBoton = digitalRead(botonPin);
+  
+  //  Comprueba si el botón acaba de ser presionado (de HIGH a LOW)
+  if (estadoBoton == LOW && ultimoEstadoBoton == HIGH) {
     
     // 🚦 Fase 1: Autos en verde, peatones en rojo
     digitalWrite(LED_1, LOW);   // Rojo autos OFF
@@ -547,16 +553,18 @@ void loop() {
     digitalWrite(LED_4, LOW);   // Verde peatones OFF
     digitalWrite(LED_5, HIGH);  // Rojo peatones ON
     delay(2000); // 2 segundos
-  }
+    
+    // Regresa al estado de espera 
 
-  // Estado de espera: semáforo en rojo para todos
-  else {
     digitalWrite(LED_1, HIGH);  // Rojo autos ON
     digitalWrite(LED_2, LOW);
     digitalWrite(LED_3, LOW);
     digitalWrite(LED_4, LOW);   // Verde peatones OFF
     digitalWrite(LED_5, HIGH);  // Rojo peatones ON
   }
+
+
+  ultimoEstadoBoton = estadoBoton;
 }
 ```
 <img src="<img src="https://raw.githubusercontent.com/GeraldineToro/Interfaz-II-/refs/heads/main/img/Captura%20de%20pantalla%202025-09-22%20105952.png"/>

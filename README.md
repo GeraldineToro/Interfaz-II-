@@ -567,5 +567,4 @@ void loop() {
   ultimoEstadoBoton = estadoBoton;
 }
 ```
-<img src="<img src="https://raw.githubusercontent.com/GeraldineToro/Interfaz-II-/refs/heads/main/img/Captura%20de%20pantalla%202025-09-22%20105952.png"/>
 

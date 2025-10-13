@@ -1,6 +1,7 @@
 # Interfaz-II-
 Indice 
-1. [Hola Mundo](#https://github.com/GeraldineToro/Interfaz-II-#ejercicio-n1-cueck)
+
+1.  [Hola Mundo](#ejercicio-n1-cueck) <br>
 
 ##### Ejercicio n°1: cueck
 

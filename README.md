@@ -17,7 +17,6 @@ void loop() {
 ```
 <img scr="https://raw.githubusercontent.com/GeraldineToro/Interfaz-II-/refs/heads/main/img/ejercicio%201.png"/>
 
-```
 ##### Ejercicio n° 2: Led intermitente
 
 ```js

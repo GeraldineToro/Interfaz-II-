@@ -4,7 +4,8 @@ Indice
 1.  [Hola Mundo](#ejercicio-n1-cueck) <br>
 2.  [Led intermitente](#ejercicio-n2-led-intermitente) <br>
 3.  [Led con potenciometro](#ejercicio-n-3-led-con-potenciometro) <br>
-5.  
+4.  [Led con pulsador](#ejercicio-n4-led-pulsador) <br>
+5.  [Semaforo](#ejercicio-n5-semaforo) <br>   
 ##### Ejercicio n°1: cueck
 
 ```js

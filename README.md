@@ -115,7 +115,6 @@ void loop() {
 }
 ```
 ##### <img src="https://raw.githubusercontent.com/GeraldineToro/Interfaz-II-/refs/heads/main/img/semaforo.png"/>
-
 ```
 
 ##### Eercicio n°6: Arduino-Processing

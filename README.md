@@ -3,7 +3,8 @@ Indice
 
 1.  [Hola Mundo](#ejercicio-n1-cueck) <br>
 2.  [Led intermitente](#ejercicio-n2-led-intermitente) <br>
-
+3.  [Led con potenciometro](#ejercicio-n-3-led-con-potenciometro) <br>
+5.  
 ##### Ejercicio n°1: cueck
 
 ```js
